@@ -37,7 +37,7 @@ public class MeFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        showContentView();
+        cancelLoading();
         String url = "http://upload.tradeaider.com/report/2017/09/01/47256164877c406790380ea780ec19e1.jpg";
         //高斯模糊图
         RequestOptions options = new RequestOptions();
@@ -50,6 +50,11 @@ public class MeFragment extends BaseFragment {
         RequestOptions options1 = new RequestOptions();
         options1.transform(new CircleTransform(mContext));
         Glide.with(this).load(url).apply(options1).into(ivSmall);
+
+    }
+
+    @Override
+    protected void onErrorRefresh() {
 
     }
 

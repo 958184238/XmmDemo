@@ -14,7 +14,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.adapter.GridSpacingItemDecoration;
 import com.exam.admin.rongyundemo.adapter.WelfareAdapter;
-import com.exam.admin.rongyundemo.service.frame.BaseSubscriber;
+import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
 import com.exam.admin.rongyundemo.service.frame.GankApi;
 import com.exam.admin.rongyundemo.service.frame.GankBaseUrl;
 import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
@@ -78,11 +78,11 @@ public class CircleFriendsActivity extends AppCompatActivity {
                 .getWelfare(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new BaseSubscriber<WelfareResponse>(mContext) {
+                .subscribe(new HttpSubscriber<WelfareResponse>(mContext) {
                     @Override
                     public void onNext(WelfareResponse response) {
                         super.onNext(response);
-//                        showContentView();
+//                        cancelLoading();
                         List<WelfareResponse.ResultsBean> list = response.getResults();
                         allList.addAll(list);
                         if (adapter == null) {
@@ -138,6 +138,11 @@ public class CircleFriendsActivity extends AppCompatActivity {
                         if (list.size() == 0) {
                             adapter.loadMoreEnd();
                         }
+                    }
+
+                    @Override
+                    protected void doOnNext(WelfareResponse welfareResponse) {
+
                     }
                 });
     }

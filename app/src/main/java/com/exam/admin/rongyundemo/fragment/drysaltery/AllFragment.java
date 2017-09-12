@@ -9,8 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.adapter.AllAdapter;
+import com.exam.admin.rongyundemo.animation.CustomAnimation;
 import com.exam.admin.rongyundemo.fragment.BaseFragment;
-import com.exam.admin.rongyundemo.service.frame.BaseSubscriber;
+import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
 import com.exam.admin.rongyundemo.service.frame.GankApi;
 import com.exam.admin.rongyundemo.service.frame.GankBaseUrl;
 import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
@@ -32,7 +33,7 @@ import rx.schedulers.Schedulers;
  * =========================
  */
 
-public class AllFragment extends BaseFragment {
+public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, BaseQuickAdapter.RequestLoadMoreListener {
 
     @BindView(R.id.recyclerview)
     RecyclerView recyclerview;
@@ -50,52 +51,28 @@ public class AllFragment extends BaseFragment {
 //        if (!mIsVisible || !isPrepared || !isFirst) {
 //            return;
 //        }
-//        getNewData();
+//        getData();
     }
 
-    private void getNewData() {
+    private void getData(final boolean isRefesh, final boolean isLoadMore) {
         RetrofitAPIManager
                 .creatRetrofit(GankBaseUrl.DATA)
                 .create(GankApi.class)
                 .getAll(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new BaseSubscriber<AllResponse>(mContext) {
-                    @Override
-                    public void onNext(AllResponse response) {
-                        super.onNext(response);
-                        showContentView();
-                        List<AllResponse.ResultsBean> list = response.getResults();
-                        allList.addAll(list);
-                        if (adapter == null) {
-                            adapter = new AllAdapter(R.layout.all_item, allList);
-                            recyclerview.setAdapter(adapter);
-                            //  加载动画
-                            adapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
-                            //  预加载
-                            //  当列表滑动到倒数第N个Item的时候(默认是1)回调onLoadMoreRequested方法
-                            adapter.setPreLoadNumber(2);
-                            //  自动加载
-                            //  滑动最后一个Item的时候回调onLoadMoreRequested方法
-                            adapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
-                                @Override
-                                public void onLoadMoreRequested() {
-                                    pageNum += 1;
-                                    getNewData();
-                                }
-                            }, recyclerview);
-                        } else {
-                            adapter.notifyDataSetChanged();
-                        }
+                .subscribe(new HttpSubscriber<AllResponse>(mContext) {
 
-                        //刷新完成
-                        swiperefreshlayout.setRefreshing(false);
-                        adapter.setEnableLoadMore(true);
-                        //加载完成
-                        adapter.loadMoreComplete();
-                        //没有数据了
-                        if (list.size() == 0) {
-                            adapter.loadMoreEnd();
+                    @Override
+                    protected void doOnNext(AllResponse response) {
+                        if (isRefesh) {
+                            cancelLoading();
+                            adapter.setNewData(response.getResults());
+                            swiperefreshlayout.setRefreshing(false);
+                            adapter.setEnableLoadMore(true);
+                        } else if (isLoadMore) {
+                            adapter.addData(response.getResults());
+                            adapter.loadMoreComplete();
                         }
                     }
                 });
@@ -104,32 +81,46 @@ public class AllFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        refresh();
-        showLoading();
         recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
-//        recyclerview.addItemDecoration(new GridSpacingItemDecoration(2, 10, true));
-        isPrepared = true;
-
-        getNewData();
-    }
-
-    private void refresh() {
         swiperefreshlayout.setColorSchemeResources(R.color.blue);
-        swiperefreshlayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                //关闭自动加载
-                adapter.setEnableLoadMore(false);
-                allList.clear();
-                adapter.notifyDataSetChanged();
-                pageNum = 1;
-                getNewData();
-            }
-        });
+        swiperefreshlayout.setOnRefreshListener(this);
+        initAdapter();
+        showLoading();
+        getData(true, false);
     }
+
+    private void initAdapter() {
+        adapter = new AllAdapter(R.layout.all_item, null);
+        recyclerview.setAdapter(adapter);
+        adapter.openLoadAnimation(new CustomAnimation());
+        adapter.isFirstOnly(false);
+        adapter.setPreLoadNumber(2);
+        adapter.setOnLoadMoreListener(this, recyclerview);
+    }
+
+    @Override
+    public void onErrorRefresh() {
+
+    }
+
 
     @Override
     public int setContent() {
         return R.layout.all_fragment;
+    }
+
+    @Override
+    public void onRefresh() {
+        //刷新
+        pageNum = 1;
+        adapter.setEnableLoadMore(false);
+        getData(true, false);
+    }
+
+    @Override
+    public void onLoadMoreRequested() {
+        //加载更多
+        pageNum += 1;
+        getData(false, true);
     }
 }

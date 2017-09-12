@@ -2,23 +2,18 @@ package com.exam.admin.rongyundemo.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+import com.chad.library.adapter.base.entity.AbstractExpandableItem;
+import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.fragment.drysaltery.AllFragment;
-import com.exam.admin.rongyundemo.fragment.drysaltery.AndroidFragment;
-import com.exam.admin.rongyundemo.fragment.drysaltery.EntertainmenteFragment;
-import com.exam.admin.rongyundemo.fragment.drysaltery.ExpandFragment;
-import com.exam.admin.rongyundemo.fragment.drysaltery.FrontFragment;
-import com.exam.admin.rongyundemo.fragment.drysaltery.IOSFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,12 +33,13 @@ import butterknife.Unbinder;
 
 public class HomePageFragment extends Fragment {
 
-    @BindView(R.id.tablayout)
-    TabLayout tablayout;
-    @BindView(R.id.viewpager)
-    ViewPager viewpager;
     Unbinder unbinder;
+    @BindView(R.id.recyclerview)
+    RecyclerView recyclerview;
     private FragmentActivity context;
+    private int lv0Count = 2;
+    private int lv1Count = 2;
+    private int personCount = 5;
 
 
     @Nullable
@@ -52,43 +48,29 @@ public class HomePageFragment extends Fragment {
         View view = inflater.inflate(R.layout.homepage, null);
         context = getActivity();
         unbinder = ButterKnife.bind(this, view);
-
-        tablayout = (TabLayout) view.findViewById(R.id.tablayout);
-        // 将ViewPager和TabLayout绑定
-        tablayout.setupWithViewPager(viewpager);
-        // 设置tab文本的没有选中（第一个参数）和选中（第二个参数）的颜色
-        int blue = ContextCompat.getColor(context, R.color.blue);
-        int gray = ContextCompat.getColor(context, R.color.gray);
-        tablayout.setTabTextColors(gray, blue);
-//        福利 | Android | iOS | 休息视频 | 拓展资源 | 前端 | all
-        final List<Fragment> list = new ArrayList<>();
-        list.add(new AllFragment());
-        list.add(new WelfareFragment());
-        list.add(new AndroidFragment());
-        list.add(new IOSFragment());
-        list.add(new EntertainmenteFragment());
-        list.add(new ExpandFragment());
-        list.add(new FrontFragment());
-        final String[] title = new String[]{"All", "福利", "Android", "iOS", "休息视频", "拓展资源", "前端"};
-        viewpager.setOffscreenPageLimit(5);
-        FragmentPagerAdapter fragmentPagerAdapter = new FragmentPagerAdapter(getChildFragmentManager()) {
-            @Override
-            public int getCount() {
-                return list.size();
-            }
-
-            @Override
-            public Fragment getItem(int position) {
-                return list.get(position);
-            }
-
-            @Override
-            public CharSequence getPageTitle(int position) {
-                return title[position];
-            }
-        };
-        viewpager.setAdapter(fragmentPagerAdapter);
+        init(view);
         return view;
+    }
+
+    private void init(View view) {
+        //树形列表
+
+    }
+
+    private ArrayList<MultiItemEntity> generateData() {
+        ArrayList<MultiItemEntity> res = new ArrayList<>();
+        for (int i = 0; i < lv0Count; i++) {
+            Level0Item lv0 = new Level0Item("haha" + i);
+            for (int j = 0; j < lv1Count; j++) {
+                Level1Item lv1 = new Level1Item("haha" + j);
+                for (int k = 0; k < personCount; k++) {
+                    lv1.addSubItem(new Person());
+                }
+                lv0.addSubItem(lv1);
+            }
+            res.add(lv0);
+        }
+        return res;
     }
 
 
@@ -97,4 +79,49 @@ public class HomePageFragment extends Fragment {
         super.onDestroyView();
         unbinder.unbind();
     }
+
+    public class ExpandableItemAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> {
+
+        public ExpandableItemAdapter(List<MultiItemEntity> data) {
+            super(data);
+        }
+
+
+        @Override
+        protected void convert(BaseViewHolder helper, MultiItemEntity item) {
+
+        }
+    }
+
+    public class Level0Item extends AbstractExpandableItem<Level1Item> implements MultiItemEntity {
+        public Level0Item(String s) {
+
+        }
+
+        @Override
+        public int getLevel() {
+            return 0;
+        }
+
+        @Override
+        public int getItemType() {
+            return 0;
+        }
+    }
+
+    public class Level1Item extends AbstractExpandableItem<Person> {
+        public Level1Item(String s) {
+
+        }
+
+        @Override
+        public int getLevel() {
+            return 0;
+        }
+    }
+
+    public class Person {
+    }
+
+
 }

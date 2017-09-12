@@ -22,7 +22,7 @@ import com.exam.admin.rongyundemo.activity.DetailsActivity;
 import com.exam.admin.rongyundemo.adapter.GridSpacingItemDecoration;
 import com.exam.admin.rongyundemo.adapter.WelfareAdapter;
 import com.exam.admin.rongyundemo.contanst.SealConst;
-import com.exam.admin.rongyundemo.service.frame.BaseSubscriber;
+import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
 import com.exam.admin.rongyundemo.service.frame.GankApi;
 import com.exam.admin.rongyundemo.service.frame.GankBaseUrl;
 import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
@@ -121,6 +121,11 @@ public class WelfareFragment extends BaseFragment {
         ActivityCompat.setExitSharedElementCallback(mContext, mCallback);
     }
 
+    @Override
+    protected void onErrorRefresh() {
+
+    }
+
     private void initRecycle() {
         recyclerview.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         recyclerview.addItemDecoration(new GridSpacingItemDecoration(2, 10, true));
@@ -203,11 +208,11 @@ public class WelfareFragment extends BaseFragment {
                 .getWelfare(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new BaseSubscriber<WelfareResponse>(mContext) {
+                .subscribe(new HttpSubscriber<WelfareResponse>(mContext) {
                     @Override
                     public void onNext(WelfareResponse response) {
                         super.onNext(response);
-                        showContentView();
+                        cancelLoading();
                         List<WelfareResponse.ResultsBean> list = response.getResults();
                         allList.addAll(list);
                         if (adapter == null) {
@@ -257,6 +262,11 @@ public class WelfareFragment extends BaseFragment {
                         if (list.size() == 0) {
                             adapter.loadMoreEnd();
                         }
+                    }
+
+                    @Override
+                    protected void doOnNext(WelfareResponse welfareResponse) {
+
                     }
                 });
     }

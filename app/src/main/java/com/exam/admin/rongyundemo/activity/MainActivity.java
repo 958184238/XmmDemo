@@ -14,8 +14,8 @@ import android.widget.Toast;
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.fragment.DiscoverFragment;
 import com.exam.admin.rongyundemo.fragment.HomePageFragment;
-import com.exam.admin.rongyundemo.fragment.InfoFragment;
 import com.exam.admin.rongyundemo.fragment.MeFragment;
+import com.exam.admin.rongyundemo.fragment.drysaltery.AllFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;
                 case 1:
-                    fragments[index] = new InfoFragment();
+                    fragments[index] = new AllFragment();
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;
                 case 2:

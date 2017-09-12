@@ -37,7 +37,12 @@ public class DiscoverFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        showContentView();
+        cancelLoading();
+    }
+
+    @Override
+    protected void onErrorRefresh() {
+
     }
 
     @Override

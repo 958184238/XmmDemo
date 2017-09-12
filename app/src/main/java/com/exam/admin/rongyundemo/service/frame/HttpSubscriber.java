@@ -11,19 +11,19 @@ import rx.Subscriber;
  * Created by Administrator on 2017/4/15.
  */
 
-public class BaseSubscriber<T> extends Subscriber<T> {
+public abstract class HttpSubscriber<T> extends Subscriber<T> {
     private Dialog mDialog;
     private Context mContext;
 
-    public BaseSubscriber() {
+    public HttpSubscriber() {
     }
 
-    public BaseSubscriber(Context context) {
+    public HttpSubscriber(Context context) {
         this.mContext = context;
     }
 
 
-    public BaseSubscriber(Context context, Dialog dialog) {
+    public HttpSubscriber(Context context, Dialog dialog) {
         this.mContext = context;
         this.mDialog = dialog;
     }
@@ -69,7 +69,10 @@ public class BaseSubscriber<T> extends Subscriber<T> {
 //        if (mDialog != null) {
 //            mDialog.dismiss();
 //        }
+        doOnNext(t);
     }
+
+    protected abstract void doOnNext(T t);
 
 
 }

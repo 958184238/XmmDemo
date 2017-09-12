@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.contanst.SealConst;
-import com.exam.admin.rongyundemo.service.frame.BaseSubscriber;
+import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
 import com.exam.admin.rongyundemo.service.frame.SealBaseUrl;
 import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
 import com.exam.admin.rongyundemo.service.frame.SealApi;
@@ -117,7 +117,7 @@ public class LoginActivity extends Activity {
                         .login(request)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new BaseSubscriber<LoginResponse>(context) {
+                        .subscribe(new HttpSubscriber<LoginResponse>(context) {
                             @Override
                             public void onNext(LoginResponse loginResponse) {
                                 super.onNext(loginResponse);
@@ -125,6 +125,11 @@ public class LoginActivity extends Activity {
                                 String token = loginResponse.getResult().getToken();
                                 SPUtils.put(context, SealConst.SEALTALK_LOGING_TOKEN, token);
                                 startActivity(new Intent(context, MainActivity.class));
+                            }
+
+                            @Override
+                            protected void doOnNext(LoginResponse loginResponse) {
+
                             }
                         });
                 break;

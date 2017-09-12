@@ -111,7 +111,7 @@ public abstract class BaseFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 showLoading();
-                onRefresh();
+                onErrorRefresh();
             }
         });
     }
@@ -119,9 +119,7 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 加载失败后点击后的操作
      */
-    protected void onRefresh() {
-
-    }
+    protected abstract void onErrorRefresh();
 
     /**
      * 布局
@@ -150,9 +148,9 @@ public abstract class BaseFragment extends Fragment {
     }
 
     /**
-     * 加载完成的状态
+     * 取消加载
      */
-    protected void showContentView() {
+    protected void cancelLoading() {
         if (llProgressBar.getVisibility() != View.GONE) {
             llProgressBar.setVisibility(View.GONE);
         }
