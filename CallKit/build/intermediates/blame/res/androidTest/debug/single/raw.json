@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\CallKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\voip_outgoing_ring.mp3",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\CallKit\\build\\intermediates\\bundles\\debug\\res\\raw\\voip_outgoing_ring.mp3"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\CallKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\voip_outgoing_ring.mp3",
         "source": "D:\\MyAsDemo\\RongYunDemo\\CallKit\\build\\intermediates\\bundles\\debug\\res\\raw\\voip_outgoing_ring.mp3"
     }
