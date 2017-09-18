@@ -10,7 +10,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.service.response.WelfareResponse;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,7 +35,7 @@ public class WelfareAdapter extends BaseQuickAdapter<WelfareResponse.ResultsBean
 //                .load(item.getUrl() + "?imageView2/0/w/100")
 //                .thumbnail(0.1f)
 //                .into(ivWelfare);
-        Picasso.with(mContext).load(item.getUrl() + "?imageView2/0/w/100").into(ivWelfare);
+//        Picasso.with(mContext).load(item.getUrl() + "?imageView2/0/w/100").into(ivWelfare);
 //        ivWelfare.setTag(item.getUrl());
         ivWelfare.setTransitionName(item.getUrl());
     }

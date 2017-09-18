@@ -1,22 +1,18 @@
 package com.exam.admin.rongyundemo.utils.glide;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.sunfusheng.glideimageview.GlideImageLoader;
-import com.sunfusheng.glideimageview.progress.GlideApp;
-import com.sunfusheng.glideimageview.progress.OnGlideImageViewListener;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 /**
  * ========================
@@ -37,73 +33,84 @@ public class GlideUtils {
      * @param thumbnailUrl 缩略图路径
      * @param imageView
      */
-    public static void loadImage(Context context, String url, String thumbnailUrl, ImageView imageView, final ProgressBar progressBar) {
+    public static void loadImage(Context context, String url, String thumbnailUrl, final ImageView imageView, final ProgressBar progressBar) {
         // 跳过内存缓存,不缓存到SDCard中
-        RequestOptions requestOptions = new RequestOptions()
-                .skipMemoryCache(true)
-                .diskCacheStrategy(DiskCacheStrategy.NONE);
-
-        GlideApp.with(context)
+        Glide.with(context)
                 .load(url)
-//                .error(R.mipmap.jianli_icons)
-                //加载缩略图
-//                .thumbnail(Glide.with(mContext)
-//                        .load(thumbnailUrl)
-//                        .listener(new RequestListener<Drawable>() {
-//                            @Override
-//                            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-//                                return false;
-//                            }
-//
-//                            @Override
-//                            public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-//                                progressBar.setVisibility(View.VISIBLE);
-//                                return false;
-//                            }
-//                        })
-//                        .apply(requestOptions))
-                .thumbnail(0.1f)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .listener(new RequestListener<Drawable>() {
-                    @Override
-                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        progressBar.setVisibility(View.GONE);
-                        return false;
-                    }
+                .thumbnail(Glide.with(context)
+                        .load(thumbnailUrl)
+                        .skipMemoryCache(true)
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .listener(new RequestListener<String, GlideDrawable>() {
+                                      @Override
+                                      public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                                          return false;
+                                      }
 
-                    @Override
-                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        progressBar.setVisibility(View.GONE);
-//                        view.setVisibility(View.VISIBLE);
-                        return false;
-                    }
-                })
-                .into(imageView);
-        GlideImageLoader loader = new GlideImageLoader(imageView);
-        loader.setOnGlideImageViewListener(url, new OnGlideImageViewListener() {
+                                      @Override
+                                      public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                                          progressBar.setVisibility(View.VISIBLE);
+                                          return false;
+                                      }
+                                  }
+
+                        )).listener(new RequestListener<String, GlideDrawable>() {
             @Override
-            public void onProgress(int percent, boolean isDone, GlideException exception) {
-                progressBar.setProgress(percent);
-                progressBar.setVisibility(isDone ? View.GONE : View.VISIBLE);
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                progressBar.setVisibility(View.GONE);
+                return false;
             }
-        });
 
-
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                progressBar.setVisibility(View.GONE);
+                imageView.setVisibility(View.VISIBLE);
+                return false;
+            }
+        }).into(imageView);
     }
 
     /**
-     * 加载gif图片
+     * 加载普通图片
      *
      * @param context
      * @param url
      * @param view
      */
-    public static void loadGif(Context context, String url, ImageView view) {
-        RequestOptions requestOptions = new RequestOptions();
-        GlideApp.with(context)
+    public static void loadNormal(Context context, String url, ImageView view) {
+        Glide.with(context)
                 .load(url)
                 .thumbnail(0.1f)
-//                .transition(new )
+                .into(view);
+    }
+
+    /**
+     * 加载高斯模糊图片
+     *
+     * @param context
+     * @param url
+     * @param view
+     */
+    public static void loadBlur(Context context, String url, ImageView view) {
+        Glide.with(context)
+                .load(url)
+                .thumbnail(0.1f)
+                .bitmapTransform(new BlurTransformation(context, 23, 4))
+                .into(view);
+    }
+
+    /**
+     * 加载圆形图片
+     *
+     * @param context
+     * @param url
+     * @param view
+     */
+    public static void loadCropCircle(Context context, String url, ImageView view) {
+        Glide.with(context)
+                .load(url)
+                .thumbnail(0.1f)
+                .bitmapTransform(new CropCircleTransformation(context))
                 .into(view);
     }
 }

@@ -1,6 +1,5 @@
 package com.exam.admin.rongyundemo.fragment;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +7,6 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.SharedElementCallback;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
@@ -18,13 +16,12 @@ import android.view.ViewTreeObserver;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.activity.DetailsActivity;
 import com.exam.admin.rongyundemo.adapter.GridSpacingItemDecoration;
 import com.exam.admin.rongyundemo.adapter.WelfareAdapter;
 import com.exam.admin.rongyundemo.contanst.SealConst;
-import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
 import com.exam.admin.rongyundemo.service.frame.GankApi;
 import com.exam.admin.rongyundemo.service.frame.GankBaseUrl;
+import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
 import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
 import com.exam.admin.rongyundemo.service.response.WelfareResponse;
 
@@ -238,15 +235,15 @@ public class WelfareFragment extends BaseFragment {
                                 public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                                     //过渡动画
                                     WelfareResponse.ResultsBean resultsBean = allList.get(position);
-                                    Intent intent = new Intent(getContext(), DetailsActivity.class);
-                                    intent.putExtra("index", position);
-                                    intent.putExtra("allList", allList);
-                                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                                            getActivity(),
-                                            view.findViewById(R.id.iv_welfare),
-                                            resultsBean.getUrl()
-                                    );
-                                    ActivityCompat.startActivity((Activity) getContext(), intent, options.toBundle());
+//                                    Intent intent = new Intent(getContext(), DetailsActivity.class);
+//                                    intent.putExtra("index", position);
+//                                    intent.putExtra("allList", allList);
+//                                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+//                                            getActivity(),
+//                                            view.findViewById(R.id.iv_welfare),
+//                                            resultsBean.getUrl()
+//                                    );
+//                                    ActivityCompat.startActivity((Activity) getContext(), intent, options.toBundle());
                                 }
                             });
                         } else {

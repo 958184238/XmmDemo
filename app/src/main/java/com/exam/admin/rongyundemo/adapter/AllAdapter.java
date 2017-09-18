@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.service.response.AllResponse;
-import com.sunfusheng.glideimageview.progress.GlideApp;
 
 import java.util.List;
 
@@ -47,8 +47,8 @@ public class AllAdapter extends BaseQuickAdapter<AllResponse.ResultsBean, BaseVi
         if (url.endsWith("jpg")) {
             ivAllWelfare.setVisibility(View.VISIBLE);
             llWelfareOther.setVisibility(View.GONE);
-            GlideApp.with(mContext)
-                    .load(item.getUrl() + "?imageView2/0/w/100")
+            Glide.with(mContext)
+                    .load(item.getUrl())
                     .thumbnail(0.1f)
                     .into(ivAllWelfare);
         } else {
@@ -57,12 +57,9 @@ public class AllAdapter extends BaseQuickAdapter<AllResponse.ResultsBean, BaseVi
             tvAndroidDes.setText(item.getDesc());
 
             // 显示gif图片会很耗内存
-            if (item.getImages() != null
-                    && item.getImages().size() > 0
-                    && !TextUtils.isEmpty(item.getImages().get(0))) {
+            if (item.getImages() != null && item.getImages().size() > 0 && !TextUtils.isEmpty(item.getImages().get(0))) {
                 ivAndroidPic.setVisibility(View.VISIBLE);
-//            llWelfareOther.setVisibility(View.GONE);
-                GlideApp.with(mContext)
+                Glide.with(mContext)
                         .load(item.getImages().get(0))
                         .thumbnail(0.1f)
                         .into(ivAndroidPic);
@@ -72,36 +69,5 @@ public class AllAdapter extends BaseQuickAdapter<AllResponse.ResultsBean, BaseVi
         }
         tvAndroidWho.setText(item.getWho());
         tvAndroidTime.setText(item.getPublishedAt());
-//
-//        if (isAll) {
-//            tvContentType.setVisibility(View.VISIBLE);
-//            tvContentType.setText(" · " + item.getType());
-//        } else {
-//            tvContentType.setVisibility(View.GONE);
-//
-//        }
-//        binding.setResultsBean(item);
-//        binding.executePendingBindings();
-
-        // 显示gif图片会很耗内存
-//        if (item.getImages() != null
-//                && item.getImages().size() > 0
-//                && !TextUtils.isEmpty(item.getImages().get(0))) {
-//            ivAndroidPic.setVisibility(View.VISIBLE);
-////            llWelfareOther.setVisibility(View.GONE);
-//            GlideApp.with(mContext)
-//                    .load(item.getImages().get(0))
-//                    .thumbnail(0.1f)
-//                    .into(ivAndroidPic);
-//        } else {
-//            ivAndroidPic.setVisibility(View.GONE);
-//        }
-//
-//        llAll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                WebViewActivity.loadUrl(v.getContext(), item.getUrl(), "加载中...");
-//            }
-//        });
     }
 }

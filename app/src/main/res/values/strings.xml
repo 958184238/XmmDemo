@@ -8,4 +8,7 @@
     <string name="save">保存</string>
     <string name="index">%1$d/%2$d</string>
     <string name="transition_wechat_img">transition_wechat_img</string>
+    <string name="error_gif">错误</string>
+    <string name="post_delete_tv_d">拖动到此处，进行删除</string>
+    <string name="post_delete_tv_s">放开手指，进行删除</string>
 </resources>

@@ -5,29 +5,12 @@
     <color name="colorAccent">#FF4081</color>
     <color name="blue">#0195ff</color>
     <color name="white">#ffffff</color>
-    <color name="gray">#999999</color>
+    <color name="gray">#9b9b9b</color>
     <color name="divide">#50cccccc</color>
     <color name="black">#4a4a4a</color>
     <color name="bg_color">#f0f3f8</color>
     <color name="transparent">#00000000</color>
     <color name="transparent90_white">#90ffffff</color>
-    <!--&lt;!&ndash;页面背景的颜色&ndash;&gt;-->
-    <!--<color name="colorPageBg">#f2f4f5</color>-->
-    <!--&lt;!&ndash;item的5.0一下版本选择器颜色&ndash;&gt;-->
-    <!--<color name="itemLowBackground">#d9d9d9</color>-->
-    <!--&lt;!&ndash;正文文字颜色&ndash;&gt;-->
-    <!--<color name="colorContent">#ff333333</color>-->
-    <!--&lt;!&ndash;透明色&ndash;&gt;-->
-    <!--<color name="colorTransparent">#00000000</color>-->
-    <!--&lt;!&ndash;半透明&ndash;&gt;-->
-    <!--<color name="colorBanTransparent">#11000000</color>-->
-    <!--&lt;!&ndash;首页item文字颜色&ndash;&gt;-->
-    <!--<color name="colorSubtitle">#999</color>-->
-
-    <!--<color name="colorPrimary">#3F51B5</color>-->
-    <!--<color name="colorPrimaryDark">#303F9F</color>-->
-    <!--<color name="colorAccent">#FF4081</color>-->
-
     <color name="colorTheme">#ffce3d3a</color>
     <!--页面背景的颜色-->
     <color name="colorPageBg">#f2f4f5</color>
@@ -80,4 +63,7 @@
     <color name="text_deed_bg">#f6f6f6</color>
     <!--dialog的查看详情键-->
     <color name="colorBtDialog">#38659C</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="holo_red_light">#ffff4444</color>
+
 </resources>

@@ -84,18 +84,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RegisterActivity" />
-        <activity
-            android:name=".activity.DetailsActivity"
-            android:theme="@style/TransitionTheme" />
+        <!--<activity-->
+        <!--android:name=".activity.DetailsActivity"-->
+        <!--android:theme="@style/TransitionTheme" />-->
         <activity
             android:name=".activity.webview.WebViewActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.CircleFriendsActivity"
-            android:theme="@style/TransitionTheme" />
-        <activity
-            android:name=".activity.CardActivity"
-            android:theme="@style/TransitionTheme" />
+        <!--<activity-->
+        <!--android:name=".activity.CircleFriendsActivity"-->
+        <!--android:theme="@style/TransitionTheme" />-->
+        <!--<activity-->
+        <!--android:name=".activity.CardActivity"-->
+        <!--android:theme="@style/TransitionTheme" />-->
+        <activity android:name=".activity.MultiImageActivity" />
     </application>
 
 </manifest>

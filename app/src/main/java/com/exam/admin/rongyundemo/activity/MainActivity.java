@@ -12,10 +12,13 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.fragment.DiscoverFragment;
-import com.exam.admin.rongyundemo.fragment.HomePageFragment;
-import com.exam.admin.rongyundemo.fragment.MeFragment;
-import com.exam.admin.rongyundemo.fragment.drysaltery.AllFragment;
+import com.exam.admin.rongyundemo.fragment.main.AllFragment;
+import com.exam.admin.rongyundemo.fragment.main.DiscoverFragment;
+import com.exam.admin.rongyundemo.fragment.main.FriendsFragment;
+import com.exam.admin.rongyundemo.fragment.main.HomePageFragment;
+import com.exam.admin.rongyundemo.fragment.main.MeFragment;
+import com.exam.admin.rongyundemo.utils.StatusUtils;
+import com.gyf.barlibrary.ImmersionBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.main_bottom_container)
     LinearLayout bottom;
-    private Fragment[] fragments = new Fragment[4];
+    private Fragment[] fragments = new Fragment[5];
     private boolean isQuit;
 
     @Override
@@ -38,8 +41,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < childCount; i++) {
             bottom.getChildAt(i).setOnClickListener(this);
         }
-
         onClick(bottom.getChildAt(0));
+        ImmersionBar.with(this).statusBarDarkFont(true).init();
+        StatusUtils.flymeSetStatusBarLightMode(getWindow(), true);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ImmersionBar.with(this).statusBarDarkFont(true).destroy();
     }
 
     @Override
@@ -73,14 +83,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;
                 case 1:
-                    fragments[index] = new AllFragment();
+                    fragments[index] = new FriendsFragment();
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;
                 case 2:
-                    fragments[index] = new DiscoverFragment();
+                    fragments[index] = new AllFragment();
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;
                 case 3:
+                    fragments[index] = new DiscoverFragment();
+                    mTransaction.add(R.id.main_fragment_container, fragments[index]);
+                    break;
+                case 4:
                     fragments[index] = new MeFragment();
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;

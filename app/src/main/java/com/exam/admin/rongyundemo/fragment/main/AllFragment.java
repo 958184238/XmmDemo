@@ -1,10 +1,11 @@
-package com.exam.admin.rongyundemo.fragment.drysaltery;
+package com.exam.admin.rongyundemo.fragment.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.exam.admin.rongyundemo.R;
@@ -16,6 +17,7 @@ import com.exam.admin.rongyundemo.service.frame.GankApi;
 import com.exam.admin.rongyundemo.service.frame.GankBaseUrl;
 import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
 import com.exam.admin.rongyundemo.service.response.AllResponse;
+import com.exam.admin.rongyundemo.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +93,12 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
 
     private void initAdapter() {
         adapter = new AllAdapter(R.layout.all_item, null);
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                ToastUtils.showShort(mContext, "ssss" + position);
+            }
+        });
         recyclerview.setAdapter(adapter);
         adapter.openLoadAnimation(new CustomAnimation());
         adapter.isFirstOnly(false);
