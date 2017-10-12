@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.service.response.AllResponse;
+import com.exam.admin.rongyundemo.http.response.AllResponse;
 
 import java.util.List;
 

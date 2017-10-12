@@ -12,19 +12,16 @@ import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.adapter.AllAdapter;
 import com.exam.admin.rongyundemo.animation.CustomAnimation;
 import com.exam.admin.rongyundemo.fragment.BaseFragment;
-import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
-import com.exam.admin.rongyundemo.service.frame.GankApi;
-import com.exam.admin.rongyundemo.service.frame.GankBaseUrl;
-import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
-import com.exam.admin.rongyundemo.service.response.AllResponse;
+import com.exam.admin.rongyundemo.http.response.AllResponse;
+import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
+import com.exam.admin.rongyundemo.http.utils.GankApi;
+import com.exam.admin.rongyundemo.http.utils.GankBaseUrl;
+import com.exam.admin.rongyundemo.http.utils.RetrofitAPIManager;
 import com.exam.admin.rongyundemo.utils.ToastUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * ========================
@@ -41,30 +38,22 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     RecyclerView recyclerview;
     @BindView(R.id.swiperefreshlayout)
     SwipeRefreshLayout swiperefreshlayout;
-    private boolean isPrepared = false;
-    private boolean isFirst = true;
-    private List<AllResponse.ResultsBean> allList = new ArrayList<>();
     private AllAdapter adapter;
     private int pageNum = 1;
 
     @Override
     protected void loadData() {
         super.loadData();
-//        if (!mIsVisible || !isPrepared || !isFirst) {
-//            return;
-//        }
-//        getData();
     }
 
-    private void getData(final boolean isRefesh, final boolean isLoadMore) {
+    private void getData(final boolean isRefesh) {
         RetrofitAPIManager
                 .creatRetrofit(GankBaseUrl.DATA)
                 .create(GankApi.class)
                 .getAll(pageNum)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new HttpSubscriber<AllResponse>(mContext) {
-
+                .subscribe(new BaseSubscriber<AllResponse>() {
                     @Override
                     protected void doOnNext(AllResponse response) {
                         if (isRefesh) {
@@ -72,10 +61,15 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
                             adapter.setNewData(response.getResults());
                             swiperefreshlayout.setRefreshing(false);
                             adapter.setEnableLoadMore(true);
-                        } else if (isLoadMore) {
+                        } else {
                             adapter.addData(response.getResults());
                             adapter.loadMoreComplete();
                         }
+                    }
+
+                    @Override
+                    protected void doOnError(Throwable e) {
+
                     }
                 });
     }
@@ -88,7 +82,7 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         swiperefreshlayout.setOnRefreshListener(this);
         initAdapter();
         showLoading();
-        getData(true, false);
+        getData(true);
     }
 
     private void initAdapter() {
@@ -122,13 +116,13 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         //刷新
         pageNum = 1;
         adapter.setEnableLoadMore(false);
-        getData(true, false);
+        getData(true);
     }
 
     @Override
     public void onLoadMoreRequested() {
         //加载更多
         pageNum += 1;
-        getData(false, true);
+        getData(false);
     }
 }

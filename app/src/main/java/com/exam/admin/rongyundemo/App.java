@@ -1,7 +1,7 @@
 package com.exam.admin.rongyundemo;
 
-import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 
 import io.rong.imkit.RongIM;
 
@@ -14,7 +14,7 @@ import io.rong.imkit.RongIM;
  * =========================
  */
 
-public class App extends Application {
+public class App extends MultiDexApplication {
 
     private static App app;
 

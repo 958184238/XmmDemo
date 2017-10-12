@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.exam.admin.rongyundemo.R;
 
@@ -32,16 +31,12 @@ public abstract class BaseFragment extends Fragment {
 
     // fragment是否显示了
     protected boolean mIsVisible = false;
-    @BindView(R.id.rl_content_part)
-    RelativeLayout rlContentPart;
     @BindView(R.id.ll_error_refresh)
     LinearLayout llErrorRefresh;
     @BindView(R.id.ll_progress_bar)
     LinearLayout llProgressBar;
     @BindView(R.id.ll_content)
     LinearLayout llContent;
-    @BindView(R.id.container)
-    RelativeLayout container;
     Unbinder unbinder;
     @BindView(R.id.iv_progress)
     ImageView ivProgress;
@@ -102,7 +97,7 @@ public abstract class BaseFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         //加载动画
         mAnimationDrawable = (AnimationDrawable) ivProgress.getDrawable();
-        //默认进入页面就开启动画
+        //默认进入页面就开启动画ivProgress
         if (!mAnimationDrawable.isRunning()) {
             mAnimationDrawable.start();
         }
@@ -182,8 +177,8 @@ public abstract class BaseFragment extends Fragment {
         if (llErrorRefresh.getVisibility() != View.VISIBLE) {
             llErrorRefresh.setVisibility(View.VISIBLE);
         }
-        if (container.getVisibility() != View.GONE) {
-            container.setVisibility(View.GONE);
-        }
+//        if (container.getVisibility() != View.GONE) {
+//            container.setVisibility(View.GONE);
+//        }
     }
 }

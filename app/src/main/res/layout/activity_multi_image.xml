@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    tools:context="com.exam.admin.rongyundemo.activity.MultiImageActivity">
+    tools:context="com.exam.admin.rongyundemo.activity.demo.MultiImageActivity">
 
 
     <android.support.v7.widget.RecyclerView

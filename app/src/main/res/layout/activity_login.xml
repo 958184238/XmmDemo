@@ -1,38 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/de_bg"
+    android:orientation="vertical"
     tools:context="com.exam.admin.rongyundemo.activity.LoginActivity">
 
-    <FrameLayout
-        android:id="@+id/frm_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/de_img_backgroud"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="-50dp"
-            android:layout_marginRight="-300dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/de_bg" />
-
-    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/login_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="90dp"
-            android:src="@drawable/seal_logo" />
 
 
         <com.exam.admin.rongyundemo.widget.ClearWriteEditText
@@ -50,7 +31,9 @@
             android:maxLength="11"
             android:maxLines="1"
             android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
 
 
         <com.exam.admin.rongyundemo.widget.ClearWriteEditText
@@ -67,7 +50,9 @@
             android:inputType="textPassword"
             android:maxLines="1"
             android:textColor="@color/white"
-            android:textColorHint="@color/white" />
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/de_login_sign"
@@ -88,7 +73,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <TextView
@@ -123,4 +107,4 @@
     </RelativeLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

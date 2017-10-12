@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.service.response.WelfareResponse;
+import com.exam.admin.rongyundemo.http.response.WelfareResponse;
+import com.exam.admin.rongyundemo.utils.glide.GlideUtils;
 
 import java.util.List;
 
@@ -31,12 +32,7 @@ public class WelfareAdapter extends BaseQuickAdapter<WelfareResponse.ResultsBean
     @Override
     protected void convert(BaseViewHolder holder, WelfareResponse.ResultsBean item) {
         ImageView ivWelfare = holder.getView(R.id.iv_welfare);
-//        GlideApp.with(mContext)
-//                .load(item.getUrl() + "?imageView2/0/w/100")
-//                .thumbnail(0.1f)
-//                .into(ivWelfare);
-//        Picasso.with(mContext).load(item.getUrl() + "?imageView2/0/w/100").into(ivWelfare);
-//        ivWelfare.setTag(item.getUrl());
-        ivWelfare.setTransitionName(item.getUrl());
+        GlideUtils.loadNormal(mContext, item.getUrl(), ivWelfare);
+//        ivWelfare.setTransitionName(item.getUrl());
     }
 }

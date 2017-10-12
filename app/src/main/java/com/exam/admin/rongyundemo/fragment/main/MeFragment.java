@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.fragment.BaseFragment;
 import com.exam.admin.rongyundemo.utils.glide.GlideUtils;
+import com.exam.admin.rongyundemo.widget.RoundedImageView;
 
 import butterknife.BindView;
 
@@ -24,6 +25,9 @@ public class MeFragment extends BaseFragment {
     ImageView ivBg;
     @BindView(R.id.iv_small)
     ImageView ivSmall;
+    @BindView(R.id.roundedimageview)
+    RoundedImageView roundedimageview;
+//    Unbinder unbinder;
 
     @Override
     public int setContent() {
@@ -36,8 +40,9 @@ public class MeFragment extends BaseFragment {
         cancelLoading();
         String url = "https://ws1.sinaimg.cn/large/610dc034ly1fjfae1hjslj20u00tyq4x.jpg";
         //高斯模糊图
-        GlideUtils.loadBlur(mContext, url, ivBg);
+//        GlideUtils.loadBlur(mContext, url, ivBg);
         //圆形图片
+        GlideUtils.loadBlur(mContext, url, roundedimageview);
         GlideUtils.loadCropCircle(mContext, url, ivSmall);
     }
 
@@ -45,4 +50,18 @@ public class MeFragment extends BaseFragment {
     protected void onErrorRefresh() {
 
     }
+
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        // TODO: inflate a fragment view
+//        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+//        unbinder = ButterKnife.bind(this, rootView);
+//        return rootView;
+//    }
+//
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+//        unbinder.unbind();
+//    }
 }

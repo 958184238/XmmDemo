@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.activity.MultiImageActivity;
+import com.exam.admin.rongyundemo.activity.demo.MultiImageActivity;
 import com.exam.admin.rongyundemo.utils.glide.GlideUtils;
 
 import java.util.List;

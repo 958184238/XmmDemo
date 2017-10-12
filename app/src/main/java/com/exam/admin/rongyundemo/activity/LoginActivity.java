@@ -3,43 +3,39 @@ package com.exam.admin.rongyundemo.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.contanst.SealConst;
-import com.exam.admin.rongyundemo.service.frame.HttpSubscriber;
-import com.exam.admin.rongyundemo.service.frame.SealBaseUrl;
-import com.exam.admin.rongyundemo.service.frame.RetrofitAPIManager;
-import com.exam.admin.rongyundemo.service.frame.SealApi;
-import com.exam.admin.rongyundemo.service.request.LoginRequest;
-import com.exam.admin.rongyundemo.service.response.LoginResponse;
+import com.exam.admin.rongyundemo.http.request.LoginRequest;
+import com.exam.admin.rongyundemo.http.response.LoginResponse;
+import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
+import com.exam.admin.rongyundemo.http.utils.RetrofitAPIManager;
+import com.exam.admin.rongyundemo.http.utils.SealApi;
+import com.exam.admin.rongyundemo.http.utils.SealBaseUrl;
 import com.exam.admin.rongyundemo.utils.AMUtils;
 import com.exam.admin.rongyundemo.utils.NToast;
 import com.exam.admin.rongyundemo.utils.SPUtils;
+import com.exam.admin.rongyundemo.utils.ToastUtils;
 import com.exam.admin.rongyundemo.widget.ClearWriteEditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class LoginActivity extends Activity {
 
-    @BindView(R.id.de_img_backgroud)
-    ImageView deImgBackgroud;
-    @BindView(R.id.frm_bg)
-    FrameLayout frmBg;
-    @BindView(R.id.login_logo)
-    ImageView loginLogo;
+    //    @BindView(R.id.de_img_backgroud)
+//    ImageView deImgBackgroud;
+//    @BindView(R.id.frm_bg)
+//    FrameLayout frmBg;
+//    @BindView(R.id.login_logo)
+//    ImageView loginLogo;
     @BindView(R.id.de_login_phone)
     ClearWriteEditText deLoginPhone;
     @BindView(R.id.de_login_password)
@@ -58,13 +54,13 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         context = this;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Animation animation = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
-                deImgBackgroud.startAnimation(animation);
-            }
-        }, 200);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Animation animation = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
+//                deImgBackgroud.startAnimation(animation);
+//            }
+//        }, 200);
         String oldPhone = (String) SPUtils.get(context, SealConst.SEALTALK_LOGING_PHONE, "");
         String oldPassword = (String) SPUtils.get(context, SealConst.SEALTALK_LOGING_PASSWORD, "");
 
@@ -117,19 +113,17 @@ public class LoginActivity extends Activity {
                         .login(request)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new HttpSubscriber<LoginResponse>(context) {
+                        .subscribe(new BaseSubscriber<LoginResponse>() {
                             @Override
-                            public void onNext(LoginResponse loginResponse) {
-                                super.onNext(loginResponse);
-//                                ToastUtils.showLong(mContext, "登录成功" + loginResponse.getCode());
+                            protected void doOnNext(LoginResponse loginResponse) {
                                 String token = loginResponse.getResult().getToken();
                                 SPUtils.put(context, SealConst.SEALTALK_LOGING_TOKEN, token);
                                 startActivity(new Intent(context, MainActivity.class));
                             }
 
                             @Override
-                            protected void doOnNext(LoginResponse loginResponse) {
-
+                            protected void doOnError(Throwable e) {
+                                ToastUtils.showShort(context, e.getMessage());
                             }
                         });
                 break;

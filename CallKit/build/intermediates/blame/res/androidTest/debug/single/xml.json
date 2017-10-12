@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\CallKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\rc_file_path.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\IMKit\\build\\intermediates\\bundles\\default\\res\\xml\\rc_file_path.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\CallKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\rc_file_path.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\IMKit\\build\\intermediates\\bundles\\default\\res\\xml\\rc_file_path.xml"
     }

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.activity.MultiImageActivity;
+import com.exam.admin.rongyundemo.activity.demo.MultiImageActivity;
 import com.exam.admin.rongyundemo.utils.glide.GlideUtils;
 
 import java.util.List;

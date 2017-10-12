@@ -32,6 +32,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'src/main/libs')
-    compile 'com.android.support:support-v4:23.0.1'
+    compile rootProject.ext.dependencies.supportV4
     compile project(':IMLib')
 }

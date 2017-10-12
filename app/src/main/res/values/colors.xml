@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="blue">#0195ff</color>
+    <color name="blue">#00a0e9</color>
     <color name="white">#ffffff</color>
     <color name="gray">#9b9b9b</color>
     <color name="divide">#50cccccc</color>
@@ -11,7 +11,7 @@
     <color name="bg_color">#f0f3f8</color>
     <color name="transparent">#00000000</color>
     <color name="transparent90_white">#90ffffff</color>
-    <color name="colorTheme">#ffce3d3a</color>
+    <color name="colorTheme">#00a0e9</color>
     <!--页面背景的颜色-->
     <color name="colorPageBg">#f2f4f5</color>
 
@@ -65,5 +65,6 @@
     <color name="colorBtDialog">#38659C</color>
     <color name="holo_red_dark">#ffcc0000</color>
     <color name="holo_red_light">#ffff4444</color>
+    <color name="yellow">#f8b62d</color>
 
 </resources>

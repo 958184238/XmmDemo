@@ -2,5 +2,9 @@
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\IMKit\\build\\intermediates\\res\\merged\\release\\xml\\rc_file_path.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\IMKit\\src\\main\\res\\xml\\rc_file_path.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\IMKit\\build\\intermediates\\res\\merged\\release\\xml\\rc_file_path.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\IMKit\\src\\main\\res\\xml\\rc_file_path.xml"
     }
 ]

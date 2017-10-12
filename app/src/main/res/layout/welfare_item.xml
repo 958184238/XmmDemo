@@ -5,10 +5,8 @@
     android:orientation="vertical">
 
     <ImageView
-        android:transitionName="@string/transition_wechat_img"
         android:id="@+id/iv_welfare"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

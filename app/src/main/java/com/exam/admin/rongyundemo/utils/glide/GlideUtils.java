@@ -80,7 +80,7 @@ public class GlideUtils {
     public static void loadNormal(Context context, String url, ImageView view) {
         Glide.with(context)
                 .load(url)
-                .thumbnail(0.1f)
+//                .thumbnail(0.1f)
                 .into(view);
     }
 
