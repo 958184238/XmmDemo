@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\jrmf360.crt",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\raw\\jrmf360.crt"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\jrmf360.crt",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\raw\\jrmf360.crt"
     },

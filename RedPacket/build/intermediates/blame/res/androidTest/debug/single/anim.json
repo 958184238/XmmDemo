@@ -4,6 +4,10 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\open_rp.xml"
     },
     {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_right_out.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_right_out.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_push_bottom_out.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_push_bottom_out.xml"
     },
@@ -12,24 +16,20 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_out.xml"
     },
     {
-        "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_left_in.xml",
-        "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_in.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_left_in.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_in.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\actionsheet_dialog_out.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\actionsheet_dialog_out.xml"
+        "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_left_in.xml",
+        "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_in.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_scale_little_out.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_scale_little_out.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_scale_little_out.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_scale_little_out.xml"
-    },
-    {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_left_in.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_in.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_push_bottom_out.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_push_bottom_out.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_push_bottom_in.xml",
@@ -44,47 +44,47 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_scale_big_in.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\open_rp.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\open_rp.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_left_out.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_out.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_scale_big_in.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_scale_big_in.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\open_rp.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\open_rp.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_scale_little_out.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_scale_little_out.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\actionsheet_dialog_out.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\actionsheet_dialog_out.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_left_out.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_left_out.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_push_bottom_in.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_push_bottom_in.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_push_bottom_out.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_push_bottom_out.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\actionsheet_dialog_in.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\actionsheet_dialog_in.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_right_in.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_right_in.xml"
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_right_in.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_right_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_scale_big_in.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_scale_big_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\actionsheet_dialog_out.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\actionsheet_dialog_out.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\actionsheet_dialog_in.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\actionsheet_dialog_in.xml"
     },
     {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\actionsheet_dialog_in.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\actionsheet_dialog_in.xml"
-    },
-    {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_push_bottom_in.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_push_bottom_in.xml"
-    },
-    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_right_out.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_right_out.xml"
-    },
-    {
-        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\_slide_right_out.xml",
-        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\anim\\_slide_right_out.xml"
     }
 ]
