@@ -53,7 +53,7 @@ public class WelfareResponse {
          * who : dmj
          */
 
-        private String _id;
+        private String id;
         private String createdAt;
         private String desc;
         private String publishedAt;
@@ -63,12 +63,12 @@ public class WelfareResponse {
         private boolean used;
         private String who;
 
-        public String get_id() {
-            return _id;
+        public String getid() {
+            return id;
         }
 
-        public void set_id(String _id) {
-            this._id = _id;
+        public void setid(String id) {
+            this.id = id;
         }
 
         public String getCreatedAt() {
@@ -142,7 +142,7 @@ public class WelfareResponse {
 
         @Override
         public void writeToParcel(Parcel dest, int flags) {
-            dest.writeString(this._id);
+            dest.writeString(this.id);
             dest.writeString(this.createdAt);
             dest.writeString(this.desc);
             dest.writeString(this.publishedAt);
@@ -157,7 +157,7 @@ public class WelfareResponse {
         }
 
         protected ResultsBean(Parcel in) {
-            this._id = in.readString();
+            this.id = in.readString();
             this.createdAt = in.readString();
             this.desc = in.readString();
             this.publishedAt = in.readString();

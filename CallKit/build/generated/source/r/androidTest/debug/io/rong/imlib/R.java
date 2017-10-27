@@ -8,21 +8,21 @@ package io.rong.imlib;
 
 public final class R {
     public static final class bool {
-        public static final int rc_extension_history = 0x7f080003;
-        public static final int rc_typing_status = 0x7f080008;
+        public static final int rc_extension_history = 0x7f030003;
+        public static final int rc_typing_status = 0x7f030008;
     }
     public static final class integer {
-        public static final int rc_audio_encoding_bit_rate = 0x7f0c0000;
-        public static final int rc_image_quality = 0x7f0c0005;
-        public static final int rc_image_size = 0x7f0c0006;
+        public static final int rc_audio_encoding_bit_rate = 0x7f080000;
+        public static final int rc_image_quality = 0x7f080005;
+        public static final int rc_image_size = 0x7f080006;
     }
     public static final class string {
-        public static final int rc_init_failed = 0x7f060072;
-        public static final int rc_location_sharing_ended = 0x7f060089;
-        public static final int rc_media_message_default_save_path = 0x7f060133;
-        public static final int rc_notification_new_msg = 0x7f0600aa;
-        public static final int rc_notification_new_plural_msg = 0x7f0600ab;
-        public static final int rc_notification_ticker_text = 0x7f0600ac;
-        public static final int rc_quit_custom_service = 0x7f0600ce;
+        public static final int rc_init_failed = 0x7f0b0081;
+        public static final int rc_location_sharing_ended = 0x7f0b0098;
+        public static final int rc_media_message_default_save_path = 0x7f0b009a;
+        public static final int rc_notification_new_msg = 0x7f0b00ba;
+        public static final int rc_notification_new_plural_msg = 0x7f0b00bb;
+        public static final int rc_notification_ticker_text = 0x7f0b00bc;
+        public static final int rc_quit_custom_service = 0x7f0b00de;
     }
 }

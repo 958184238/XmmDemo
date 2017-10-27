@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\AndroidStudiProjects\XmmDemo\CallKit\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\AndroidStudiProjects\XmmDemo\CallKit\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\AndroidWorkspace\RongYunDemo\CallKit\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\AndroidWorkspace\RongYunDemo\CallKit\src\debug\shaders"/></dataSet></merger>

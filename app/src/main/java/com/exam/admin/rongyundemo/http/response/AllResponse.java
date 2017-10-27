@@ -52,7 +52,7 @@ public class AllResponse {
          * who : jp1017
          */
 
-        private String _id;
+        private String id;
         private String createdAt;
         private String desc;
         private String publishedAt;
@@ -63,12 +63,12 @@ public class AllResponse {
         private String who;
         private List<String> images;
 
-        public String get_id() {
-            return _id;
+        public String getid() {
+            return id;
         }
 
-        public void set_id(String _id) {
-            this._id = _id;
+        public void setid(String id) {
+            this.id = id;
         }
 
         public String getCreatedAt() {

@@ -6,5 +6,9 @@
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\CallKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\rc_btn_file_list_send.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\IMKit\\build\\intermediates\\bundles\\default\\res\\color\\rc_btn_file_list_send.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\CallKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\rc_btn_file_list_send.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\IMKit\\build\\intermediates\\bundles\\default\\res\\color\\rc_btn_file_list_send.xml"
     }
 ]

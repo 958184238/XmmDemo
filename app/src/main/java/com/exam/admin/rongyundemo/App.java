@@ -1,9 +1,8 @@
 package com.exam.admin.rongyundemo;
 
+import android.app.Application;
 import android.content.Context;
-import android.support.multidex.MultiDexApplication;
-
-import io.rong.imkit.RongIM;
+import android.support.multidex.MultiDex;
 
 /**
  * ========================
@@ -14,16 +13,22 @@ import io.rong.imkit.RongIM;
  * =========================
  */
 
-public class App extends MultiDexApplication {
+public class App extends Application {
 
     private static App app;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        RongIM.init(this);
+//        RongIM.init(this);
+        app = this;
     }
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
     public static Context getInstance() {
         return app;

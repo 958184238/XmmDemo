@@ -24,6 +24,14 @@
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_normal_round_btn_bg.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_forget_pwd.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_forget_pwd.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_hongbao.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_hongbao.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dialog_background.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_background.xml"
     },
@@ -32,28 +40,52 @@
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_gray_round.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\open_rp_anim.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\open_rp_anim.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_gray_round.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_gray_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_click_item_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_click_item_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_unbind.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_unbind.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\round_spinner_fade.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\round_spinner_fade.xml"
     },
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_white_round.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_white_round.xml"
     },
     {
-        "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_normal_item_bg.xml",
-        "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_normal_item_bg.xml"
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_white_round_stroke.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_white_round_stroke.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_round_btn.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_round_btn.xml"
     },
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\open_rp_anim.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\open_rp_anim.xml"
     },
     {
-        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_gray_round.xml",
-        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_gray_round.xml"
+        "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_normal_item_bg.xml",
+        "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_normal_item_bg.xml"
     },
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dialog_paytype_bg.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_paytype_bg.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_gray_round.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_gray_round.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_hongbao.xml",
@@ -64,16 +96,20 @@
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_checked.xml"
     },
     {
-        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_unbind.xml",
-        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_unbind.xml"
-    },
-    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_click_item_bg.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_click_item_bg.xml"
     },
     {
+        "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_unbind.xml",
+        "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_unbind.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_white_round_stroke.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_white_round_stroke.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dialog_background.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_background.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_common_btn.xml",
@@ -96,8 +132,16 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_paytype_bg.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_item.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_item.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_normal_round_btn_bg.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_normal_round_btn_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_common_btn.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_common_btn.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_progress_medium_holo.xml",
@@ -108,12 +152,20 @@
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_forget_pwd.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_gray_round.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_gray_round.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_gray_round.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_gray_round.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_code_bg.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_code_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_default_avatar.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_default_avatar.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_cb_protocol.xml",
@@ -124,12 +176,24 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_item.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_code_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_code_bg.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_default_avatar.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_default_avatar.xml"
     },
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_bribery_open.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_bribery_open.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_red_click_round.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_red_click_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_click_round_btn_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_click_round_btn_bg.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_click_round_btn_bg.xml",
@@ -144,16 +208,48 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_white_round.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_round_white.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_round_white.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_cb_protocol.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_cb_protocol.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_common_progress_bg.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_common_progress_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_cursor.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_cursor.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_unbind.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_unbind.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_progress_medium_holo.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_progress_medium_holo.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_normal_item_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_normal_item_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dialog_paytype_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_paytype_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_common_progress_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_common_progress_bg.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_red_click_round.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_red_click_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_gray_round.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_gray_round.xml"
     },
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_red_round.xml",
@@ -180,12 +276,24 @@
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_background.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_red_round.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_red_round.xml"
+    },
+    {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_white_round_stroke.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_white_round_stroke.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_white_round.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_white_round.xml"
+    },
+    {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_code_bg.xml",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_code_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_checked.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_checked.xml"
     },
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_red_click_round.xml",
@@ -216,6 +324,10 @@
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_click_round_btn_bg.xml"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\_bg_bribery_open.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\_bg_bribery_open.xml"
+    },
+    {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\open_rp_anim.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\open_rp_anim.xml"
     },
@@ -226,6 +338,10 @@
     {
         "merged": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_checked.xml",
         "source": "D:\\MyAsDemo\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_checked.xml"
+    },
+    {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_normal_round_btn_bg.xml",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_normal_round_btn_bg.xml"
     },
     {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_cursor.xml",

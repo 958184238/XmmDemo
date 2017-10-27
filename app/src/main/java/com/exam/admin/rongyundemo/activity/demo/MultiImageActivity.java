@@ -17,7 +17,7 @@ import com.exam.admin.rongyundemo.adapter.GridSpacingItemDecoration;
 import com.exam.admin.rongyundemo.adapter.PostArticleImgAdapter;
 import com.exam.admin.rongyundemo.interfa.GifSizeFilter;
 import com.exam.admin.rongyundemo.interfa.MyCallBack;
-import com.exam.admin.rongyundemo.interfa.OnRecyclerItemClickListener;
+import com.exam.admin.rongyundemo.interfa.BaseRecyclerItemClickListener;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
 import com.zhihu.matisse.engine.impl.GlideEngine;
@@ -50,8 +50,8 @@ public class MultiImageActivity extends BaseActivity {
         setContentView(R.layout.activity_multi_image);
         ButterKnife.bind(this);
         context = this;
-        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(5, StaggeredGridLayoutManager.VERTICAL));
-        recyclerview.addItemDecoration(new GridSpacingItemDecoration(5, 10, true));
+        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
+        recyclerview.addItemDecoration(new GridSpacingItemDecoration(4, 10, true));
         uris = new ArrayList<>();
         Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + getResources().getResourcePackageName(R.drawable.add) + "/" + getResources().getResourceTypeName(R.drawable.add) + "/" + getResources().getResourceEntryName(R.drawable.add));
         uris.add(uri);
@@ -102,7 +102,7 @@ public class MultiImageActivity extends BaseActivity {
         //关联对应的recyclerview
         itemTouchHelper.attachToRecyclerView(recyclerview);
         //事件监听
-        recyclerview.addOnItemTouchListener(new OnRecyclerItemClickListener(recyclerview) {
+        recyclerview.addOnItemTouchListener(new BaseRecyclerItemClickListener(recyclerview) {
             @Override
             public void onItemClick(RecyclerView.ViewHolder holder) {
                 Matisse.from(context)

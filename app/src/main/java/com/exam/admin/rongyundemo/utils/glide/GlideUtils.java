@@ -94,7 +94,7 @@ public class GlideUtils {
     public static void loadBlur(Context context, String url, ImageView view) {
         Glide.with(context)
                 .load(url)
-                .thumbnail(0.1f)
+//                .thumbnail(0.1f)
                 .bitmapTransform(new BlurTransformation(context, 23, 4))
                 .into(view);
     }
@@ -109,7 +109,7 @@ public class GlideUtils {
     public static void loadCropCircle(Context context, String url, ImageView view) {
         Glide.with(context)
                 .load(url)
-                .thumbnail(0.1f)
+//                .thumbnail(0.1f)
                 .bitmapTransform(new CropCircleTransformation(context))
                 .into(view);
     }

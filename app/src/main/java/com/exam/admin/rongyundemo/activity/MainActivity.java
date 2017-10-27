@@ -23,6 +23,9 @@ import com.gyf.barlibrary.ImmersionBar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * @author wufei
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.main_bottom_container)
@@ -98,6 +101,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     fragments[index] = new MeFragment();
                     mTransaction.add(R.id.main_fragment_container, fragments[index]);
                     break;
+                default:
+                    break;
             }
         }
         mTransaction.commit();
@@ -106,8 +111,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void hideFragments(android.support.v4.app.FragmentTransaction mTransaction) {
         for (int i = 0; i < fragments.length; i++) {
-            if (null != fragments[i])
+            if (null != fragments[i]) {
                 mTransaction.hide(fragments[i]);
+            }
         }
     }
 

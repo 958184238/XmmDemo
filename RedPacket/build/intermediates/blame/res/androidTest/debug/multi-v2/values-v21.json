@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v21\\values-v21.xml",
+            "map": [
+                {
+                    "source": "D:\\AndroidWorkspace\\RongYunDemo\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,326",
+                        "endLines": "6,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "321,718"
+                    }
+                }
+            ]
+        }
+    ]
+}

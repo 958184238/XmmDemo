@@ -4,6 +4,10 @@
         "source": "D:\\MyAsDemo\\RongYunDemo\\CallKit\\src\\main\\res\\raw\\voip_outgoing_ring.mp3"
     },
     {
+        "merged": "D:\\AndroidWorkspace\\RongYunDemo\\CallKit\\build\\intermediates\\res\\merged\\debug\\raw\\voip_outgoing_ring.mp3",
+        "source": "D:\\AndroidWorkspace\\RongYunDemo\\CallKit\\src\\main\\res\\raw\\voip_outgoing_ring.mp3"
+    },
+    {
         "merged": "E:\\AndroidStudiProjects\\XmmDemo\\CallKit\\build\\intermediates\\res\\merged\\debug\\raw\\voip_outgoing_ring.mp3",
         "source": "E:\\AndroidStudiProjects\\XmmDemo\\CallKit\\src\\main\\res\\raw\\voip_outgoing_ring.mp3"
     }
