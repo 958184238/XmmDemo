@@ -16,7 +16,7 @@ import com.exam.admin.rongyundemo.http.response.AllResponse;
 import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
 import com.exam.admin.rongyundemo.http.utils.GankApi;
 import com.exam.admin.rongyundemo.http.utils.GankBaseUrl;
-import com.exam.admin.rongyundemo.http.utils.RetrofitAPIManager;
+import com.exam.admin.rongyundemo.http.utils.RetrofitFactory;
 import com.exam.admin.rongyundemo.utils.ToastUtils;
 
 import butterknife.BindView;
@@ -47,7 +47,7 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     }
 
     private void getData(final boolean isRefesh) {
-        RetrofitAPIManager
+        RetrofitFactory
                 .creatRetrofit(GankBaseUrl.DATA)
                 .create(GankApi.class)
                 .getAll(pageNum)

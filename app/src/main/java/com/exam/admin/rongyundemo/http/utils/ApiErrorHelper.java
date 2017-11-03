@@ -8,10 +8,11 @@ import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 
 /**
- * Created by Administrator on 2017/4/15.
+ * @author Administrator
+ * @date 2017/4/15
  */
 
-class ApiErrorHelper {
+public class ApiErrorHelper {
     //异常统一处理
     public static void handleCommonError(Context context, Throwable e) {
         if (e instanceof SocketTimeoutException) {

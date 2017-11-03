@@ -1,10 +1,11 @@
 package com.exam.admin.rongyundemo.http.utils;
 
 /**
- * Created by Administrator on 2017/4/14.
+ * @author Administrator
+ * @date 2017/4/14
  */
 
-class ErrResponse extends RuntimeException {
+public class ErrResponse extends RuntimeException {
     private String msg;
     private int errorCode = 0;
 

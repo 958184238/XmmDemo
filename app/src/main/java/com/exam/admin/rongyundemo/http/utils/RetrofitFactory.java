@@ -7,10 +7,11 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 /**
- * Created by Administrator on 2017/4/14.
+ * @author Administrator
+ * @date 2017/4/14
  */
 
-public class RetrofitAPIManager {
+public class RetrofitFactory {
 
     public static Retrofit creatRetrofit(String baseUrl) {
         Retrofit retrofit = new Retrofit.Builder()
@@ -35,11 +36,13 @@ public class RetrofitAPIManager {
 
     /**
      * 带拦截器
+     *
      * @return
      */
     public static OkHttpClient getOkHttpClient() {
         OkHttpClient httpClient = new OkHttpClient.Builder()
-                .addInterceptor(new TokenInterceptor())
+                .addInterceptor(InterceptorUtil.headerInterceptor())
+                .addInterceptor(InterceptorUtil.logInterceptor())
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
@@ -49,6 +52,7 @@ public class RetrofitAPIManager {
 
     /**
      * 不带拦截器
+     *
      * @return
      */
     public static OkHttpClient getOkHttpClientWithOutHeader() {

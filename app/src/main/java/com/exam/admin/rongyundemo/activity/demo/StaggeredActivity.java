@@ -15,7 +15,7 @@ import com.exam.admin.rongyundemo.http.response.WelfareResponse;
 import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
 import com.exam.admin.rongyundemo.http.utils.GankApi;
 import com.exam.admin.rongyundemo.http.utils.GankBaseUrl;
-import com.exam.admin.rongyundemo.http.utils.RetrofitAPIManager;
+import com.exam.admin.rongyundemo.http.utils.RetrofitFactory;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,7 +85,7 @@ public class StaggeredActivity extends BaseActivity implements SwipeRefreshLayou
 
 
     private void getNewData(final boolean isRefesh) {
-        RetrofitAPIManager
+        RetrofitFactory
                 .creatRetrofit(GankBaseUrl.DATA)
                 .create(GankApi.class)
                 .getWelfare(pageNum)

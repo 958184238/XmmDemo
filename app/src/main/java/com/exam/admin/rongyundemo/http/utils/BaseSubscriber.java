@@ -5,7 +5,8 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 /**
- * Created by Administrator on 2017/4/15.
+ * @author Administrator
+ * @date 2017/4/15
  */
 
 public abstract class BaseSubscriber<T> implements Observer<T> {

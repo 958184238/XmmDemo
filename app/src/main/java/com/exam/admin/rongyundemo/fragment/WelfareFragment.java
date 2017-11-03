@@ -192,7 +192,7 @@ public class WelfareFragment extends BaseFragment {
 
 
     private void getNewData() {
-//        RetrofitAPIManager
+//        RetrofitFactory
 //                .creatRetrofit(GankBaseUrl.DATA)
 //                .create(GankApi.class)
 //                .getWelfare(pageNum)

@@ -13,7 +13,7 @@ import com.exam.admin.rongyundemo.contanst.SealConst;
 import com.exam.admin.rongyundemo.http.request.LoginRequest;
 import com.exam.admin.rongyundemo.http.response.LoginResponse;
 import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
-import com.exam.admin.rongyundemo.http.utils.RetrofitAPIManager;
+import com.exam.admin.rongyundemo.http.utils.RetrofitFactory;
 import com.exam.admin.rongyundemo.http.utils.SealApi;
 import com.exam.admin.rongyundemo.http.utils.SealBaseUrl;
 import com.exam.admin.rongyundemo.utils.AMUtils;
@@ -107,7 +107,7 @@ public class LoginActivity extends Activity {
 
                 // 通过一个特定的接口获取新的token，此处要用到同步的retrofit请求
                 LoginRequest request = new LoginRequest("86", phoneString, passwordString);
-                RetrofitAPIManager
+                RetrofitFactory
                         .creatRetrofit(SealBaseUrl.USER)
                         .create(SealApi.class)
                         .login(request)

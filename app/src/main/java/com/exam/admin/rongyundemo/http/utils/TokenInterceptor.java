@@ -14,6 +14,7 @@ import okio.BufferedSource;
 /**
  * TokenInterceptor
  * Token拦截器并自动刷新
+ * @author Administrator
  */
 
 public class TokenInterceptor implements Interceptor {
@@ -96,7 +97,7 @@ public class TokenInterceptor implements Interceptor {
 ////        map.put("deviceType", "2");
 ////        map.put("version", version);
 //        RequestBody requestBody = RequestBodyUtils.getRequestBody(map);
-//        String token = RetrofitAPIManager
+//        String token = RetrofitFactory
 //                .creatRetrofit()
 //                .create(OrderApi.class)
 //                .getNewToken(requestBody)

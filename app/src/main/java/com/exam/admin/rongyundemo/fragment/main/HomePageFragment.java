@@ -28,12 +28,12 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * ========================
  * Name: HomePageFragment
  * Des: 首页
  * User: 吴飞
  * Date: 2017/8/15 9:45
- * =========================
+ *
+ * @author wufei
  */
 
 public class HomePageFragment extends Fragment {

@@ -1,12 +1,9 @@
 package com.exam.admin.rongyundemo.http.utils;
 
 /**
- * ========================
- * Name: SealBaseUrl
- * Des: 干货分享
- * User: 吴飞
- * Date: 2017/8/15 9:45
- * =========================
+ * @author wufei
+ * @des: 干货分享
+ * @date: 2017/8/15
  */
 
 public class GankBaseUrl {
