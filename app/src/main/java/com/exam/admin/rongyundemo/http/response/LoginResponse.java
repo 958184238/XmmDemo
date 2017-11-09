@@ -1,12 +1,10 @@
 package com.exam.admin.rongyundemo.http.response;
 
 /**
- * ========================
  * Name: LoginResponse
  * Des:
  * User: 吴飞
  * Date: 2017/8/4 16:08
- * =========================
  */
 
 public class LoginResponse {

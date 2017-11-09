@@ -1,7 +1,7 @@
-package com.exam.admin.rongyundemo.http.utils;
+package com.exam.admin.rongyundemo.http.retrofit;
 
 
-import com.exam.admin.rongyundemo.http.response.AllResponse;
+import com.exam.admin.rongyundemo.http.response.AllResult;
 import com.exam.admin.rongyundemo.http.response.WelfareResponse;
 
 import io.reactivex.Observable;
@@ -19,9 +19,8 @@ import retrofit2.http.Path;
 
 public interface GankApi {
 
-    //All
     @GET("all/10/{pageNum}")
-    Observable<AllResponse> getAll(@Path("pageNum") int pageNum);
+    Observable<AllResult> getAll(@Path("pageNum") int pageNum);
 
     @GET("福利/10/{pageNum}")
     Observable<WelfareResponse> getWelfare(@Path("pageNum") int pageNum);

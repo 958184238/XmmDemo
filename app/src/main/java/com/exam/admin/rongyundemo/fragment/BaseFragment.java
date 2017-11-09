@@ -4,7 +4,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.exam.admin.rongyundemo.R;
+import com.trello.rxlifecycle2.components.support.RxFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,11 +25,11 @@ import butterknife.Unbinder;
  * User: 吴飞
  * Date: 2017/8/15 15:09
  * =========================
+ * @author Administrator
  */
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends RxFragment {
 
-    // fragment是否显示了
     protected boolean mIsVisible = false;
     @BindView(R.id.ll_error_refresh)
     LinearLayout llErrorRefresh;
@@ -42,12 +42,14 @@ public abstract class BaseFragment extends Fragment {
     ImageView ivProgress;
     private AnimationDrawable mAnimationDrawable;
     protected FragmentActivity mContext;
+    protected BaseFragment mFragment;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(setContent(), null);
         mContext = getActivity();
+        mFragment = this;
         unbinder = ButterKnife.bind(this, view);
         return view;
     }

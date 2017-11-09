@@ -4,12 +4,10 @@ import android.content.Context;
 import android.util.TypedValue;
 
 /**
- * ========================
  * Name: DensityUtils
  * Des:常用单位转换的辅助类
  * User: 吴飞
  * Date: 2017/8/2 17:35
- * =========================
  */
 
 public class DensityUtils {

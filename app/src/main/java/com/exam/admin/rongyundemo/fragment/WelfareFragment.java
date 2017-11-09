@@ -192,8 +192,8 @@ public class WelfareFragment extends BaseFragment {
 
 
     private void getNewData() {
-//        RetrofitFactory
-//                .creatRetrofit(GankBaseUrl.DATA)
+//        RetrofitHelper
+//                .createRetrofit(GankBaseUrl.DATA)
 //                .create(GankApi.class)
 //                .getWelfare(pageNum)
 //                .subscribeOn(Schedulers.io())
@@ -255,7 +255,7 @@ public class WelfareFragment extends BaseFragment {
 //                    }
 //
 //                    @Override
-//                    protected void doOnNext(WelfareResponse welfareResponse) {
+//                    protected void onSuccess(WelfareResponse welfareResponse) {
 //
 //                    }
 //                });

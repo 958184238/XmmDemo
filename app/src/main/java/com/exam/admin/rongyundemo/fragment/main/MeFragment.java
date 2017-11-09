@@ -18,6 +18,8 @@ import butterknife.BindView;
  * User: 吴飞
  * Date: 2017/8/15 9:48
  * =========================
+ *
+ * @author Administrator
  */
 
 public class MeFragment extends BaseFragment {
@@ -27,7 +29,6 @@ public class MeFragment extends BaseFragment {
     ImageView ivSmall;
     @BindView(R.id.roundedimageview)
     RoundedImageView roundedimageview;
-//    Unbinder unbinder;
 
     @Override
     public int setContent() {
@@ -40,10 +41,10 @@ public class MeFragment extends BaseFragment {
         cancelLoading();
         String url = "https://ws1.sinaimg.cn/large/610dc034ly1fjfae1hjslj20u00tyq4x.jpg";
         //高斯模糊图
-//        GlideUtils.loadBlur(mContext, url, ivBg);
-        //圆形图片
         GlideUtils.loadBlur(mContext, url, roundedimageview);
+        //圆形图片
         GlideUtils.loadCropCircle(mContext, url, ivSmall);
+        GlideUtils.loadCropCircle(mContext, url, ivBg);
     }
 
     @Override
@@ -51,17 +52,4 @@ public class MeFragment extends BaseFragment {
 
     }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        // TODO: inflate a fragment view
-//        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-//        unbinder = ButterKnife.bind(this, rootView);
-//        return rootView;
-//    }
-//
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        unbinder.unbind();
-//    }
 }

@@ -4,7 +4,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.utils.NetUtils;
 import com.exam.admin.rongyundemo.utils.StatusUtils;
 import com.gyf.barlibrary.ImmersionBar;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 /**
  * ========================
@@ -24,9 +24,11 @@ import com.gyf.barlibrary.ImmersionBar;
  * User: 吴飞
  * Date: 2017/8/23 17:08
  * =========================
+ *
+ * @author Administrator
  */
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends RxAppCompatActivity {
 
     private ImageView back;
     private TextView tvTitle;

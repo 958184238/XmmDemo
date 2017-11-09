@@ -12,29 +12,27 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.exam.admin.rongyundemo.R;
-import com.exam.admin.rongyundemo.http.response.AllResponse;
+import com.exam.admin.rongyundemo.http.response.AllResult;
 
 import java.util.List;
 
 /**
- * ========================
  * Name: AllAdapter
- * Des:
- * User: 吴飞
  * Date: 2017/8/16 17:27
- * =========================
+ *
+ * @author Administrator
  */
 
-public class AllAdapter extends BaseQuickAdapter<AllResponse.ResultsBean, BaseViewHolder> {
+public class AllAdapter extends BaseQuickAdapter<AllResult.ResultsBean, BaseViewHolder> {
 
     private boolean isAll;
 
-    public AllAdapter(@LayoutRes int layoutResId, @Nullable List<AllResponse.ResultsBean> data) {
+    public AllAdapter(@LayoutRes int layoutResId, @Nullable List<AllResult.ResultsBean> data) {
         super(layoutResId, data);
     }
 
     @Override
-    protected void convert(BaseViewHolder holder, final AllResponse.ResultsBean item) {
+    protected void convert(BaseViewHolder holder, final AllResult.ResultsBean item) {
         ImageView ivAllWelfare = holder.getView(R.id.iv_all_welfare);
         LinearLayout llWelfareOther = holder.getView(R.id.ll_welfare_other);
         TextView tvContentType = holder.getView(R.id.tv_content_type);

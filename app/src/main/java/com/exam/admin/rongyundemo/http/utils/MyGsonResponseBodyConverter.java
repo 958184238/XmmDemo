@@ -17,7 +17,9 @@ import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
 /**
- * Created by Administrator on 2017/4/14.
+ *
+ * @author Administrator
+ * @date 2017/4/14
  */
 
 public class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody, T> {

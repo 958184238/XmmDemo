@@ -9,6 +9,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.bumptech.glide.request.target.Target;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
@@ -96,7 +98,13 @@ public class GlideUtils {
                 .load(url)
 //                .thumbnail(0.1f)
                 .bitmapTransform(new BlurTransformation(context, 23, 4))
-                .into(view);
+                .into(new GlideDrawableImageViewTarget(view) {
+                    @Override
+                    public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                        super.onResourceReady(resource, animation);
+                    }
+                });
+
     }
 
     /**
@@ -106,6 +114,7 @@ public class GlideUtils {
      * @param url
      * @param view
      */
+
     public static void loadCropCircle(Context context, String url, ImageView view) {
         Glide.with(context)
                 .load(url)

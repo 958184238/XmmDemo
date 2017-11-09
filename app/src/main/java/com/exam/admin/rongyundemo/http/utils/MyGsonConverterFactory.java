@@ -13,14 +13,17 @@ import retrofit2.Converter;
 import retrofit2.Retrofit;
 
 /**
- * Created by Administrator on 2017/4/15.
+ * @author Administrator
+ * @date 2017/4/15
  */
 
 public class MyGsonConverterFactory extends Converter.Factory {
     private final Gson gson;
 
     private MyGsonConverterFactory(Gson gson) {
-        if (gson == null) throw new NullPointerException("gson == null");
+        if (gson == null) {
+            throw new NullPointerException("gson == null");
+        }
         this.gson = gson;
     }
 

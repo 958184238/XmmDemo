@@ -1,7 +1,7 @@
 package com.exam.admin.rongyundemo.http.utils;
 
 /**
- * Created by Administrator on 2017/4/15.
+ * @author Administrator
  */
 
 class ApiException extends RuntimeException {

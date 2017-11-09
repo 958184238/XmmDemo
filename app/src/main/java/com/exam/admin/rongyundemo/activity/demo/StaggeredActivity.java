@@ -12,15 +12,14 @@ import com.exam.admin.rongyundemo.activity.BaseActivity;
 import com.exam.admin.rongyundemo.adapter.GridSpacingItemDecoration;
 import com.exam.admin.rongyundemo.adapter.WelfareAdapter;
 import com.exam.admin.rongyundemo.http.response.WelfareResponse;
-import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
-import com.exam.admin.rongyundemo.http.utils.GankApi;
+import com.exam.admin.rongyundemo.http.rxjava.RxHelper;
+import com.exam.admin.rongyundemo.http.retrofit.BaseObserver;
+import com.exam.admin.rongyundemo.http.retrofit.GankApi;
 import com.exam.admin.rongyundemo.http.utils.GankBaseUrl;
-import com.exam.admin.rongyundemo.http.utils.RetrofitFactory;
+import com.exam.admin.rongyundemo.http.retrofit.RetrofitHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 
 public class StaggeredActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener, BaseQuickAdapter.RequestLoadMoreListener {
 
@@ -85,26 +84,28 @@ public class StaggeredActivity extends BaseActivity implements SwipeRefreshLayou
 
 
     private void getNewData(final boolean isRefesh) {
-        RetrofitFactory
-                .creatRetrofit(GankBaseUrl.DATA)
+        RetrofitHelper
+                .createRetrofit(GankBaseUrl.DATA)
                 .create(GankApi.class)
                 .getWelfare(pageNum)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new BaseSubscriber<WelfareResponse>() {
+                .compose(RxHelper.<WelfareResponse>normalSchedulers(mContext))
+                .subscribe(new BaseObserver<WelfareResponse>() {
                     @Override
-                    protected void doOnNext(WelfareResponse response) {
+                    protected void onSuccess(WelfareResponse response) {
                         if (isRefesh) {
                             cancelLoading();
                             adapter.setNewData(response.getResults());
-                            swiperefreshlayout.setRefreshing(false);//停止刷新
+                            swiperefreshlayout.setRefreshing(false);
+                            //停止刷新
                             adapter.setEnableLoadMore(true);
                         } else {
                             if (response.getResults() == null || response.getResults().size() == 0) {
-                                adapter.loadMoreEnd();//没有更多的数据了
+                                //没有更多的数据了
+                                adapter.loadMoreEnd();
                             } else {
                                 adapter.addData(response.getResults());
-                                adapter.loadMoreComplete();//加载完成
+                                //加载完成
+                                adapter.loadMoreComplete();
                             }
                         }
                     }

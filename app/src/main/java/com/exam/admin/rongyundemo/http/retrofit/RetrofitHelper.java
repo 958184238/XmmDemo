@@ -1,4 +1,7 @@
-package com.exam.admin.rongyundemo.http.utils;
+package com.exam.admin.rongyundemo.http.retrofit;
+
+import com.exam.admin.rongyundemo.http.utils.InterceptorUtil;
+import com.exam.admin.rongyundemo.http.utils.MyGsonConverterFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,12 +14,12 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
  * @date 2017/4/14
  */
 
-public class RetrofitFactory {
+public class RetrofitHelper {
 
-    public static Retrofit creatRetrofit(String baseUrl) {
+    public static Retrofit createRetrofit(String baseUrl) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .client(getOkHttpClient())
+                .client(okHttpClient())
                 .addConverterFactory(MyGsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
@@ -24,10 +27,10 @@ public class RetrofitFactory {
     }
 
 //    //不带请求头,用于获取最新token
-//    public static Retrofit creatRetrofit() {
+//    public static Retrofit createRetrofit() {
 //        Retrofit retrofit = new Retrofit.Builder()
 //                .baseUrl(SealBaseUrl.QC_USER)
-//                .client(getOkHttpClientWithOutHeader())
+//                .client(okHttpClientWithOutHeader())
 //                .addConverterFactory(MyGsonConverterFactory.create())
 //                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
 //                .build();
@@ -39,7 +42,7 @@ public class RetrofitFactory {
      *
      * @return
      */
-    public static OkHttpClient getOkHttpClient() {
+    private static OkHttpClient okHttpClient() {
         OkHttpClient httpClient = new OkHttpClient.Builder()
                 .addInterceptor(InterceptorUtil.headerInterceptor())
                 .addInterceptor(InterceptorUtil.logInterceptor())
@@ -55,7 +58,7 @@ public class RetrofitFactory {
      *
      * @return
      */
-    public static OkHttpClient getOkHttpClientWithOutHeader() {
+    private static OkHttpClient okHttpClientWithOutHeader() {
         OkHttpClient httpClient = new OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)

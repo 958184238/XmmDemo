@@ -3,15 +3,13 @@ package com.exam.admin.rongyundemo.http.response;
 import java.util.List;
 
 /**
- * ========================
- * Name: AllResponse
+ * Name: AllResult
  * Des:
  * User: 吴飞
  * Date: 2017/8/15 11:03
- * =========================
  */
 
-public class AllResponse {
+public class AllResult {
 
 
     /**

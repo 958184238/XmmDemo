@@ -6,12 +6,10 @@ import android.os.Parcelable;
 import java.util.List;
 
 /**
- * ========================
  * Name: WelfareResponse
  * Des:
  * User: 吴飞
  * Date: 2017/8/15 11:45
- * =========================
  */
 
 public class WelfareResponse {

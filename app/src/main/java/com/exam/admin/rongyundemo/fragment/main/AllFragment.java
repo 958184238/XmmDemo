@@ -12,24 +12,25 @@ import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.adapter.AllAdapter;
 import com.exam.admin.rongyundemo.animation.CustomAnimation;
 import com.exam.admin.rongyundemo.fragment.BaseFragment;
-import com.exam.admin.rongyundemo.http.response.AllResponse;
-import com.exam.admin.rongyundemo.http.utils.BaseSubscriber;
-import com.exam.admin.rongyundemo.http.utils.GankApi;
+import com.exam.admin.rongyundemo.http.response.AllResult;
+import com.exam.admin.rongyundemo.http.retrofit.BaseObserver;
+import com.exam.admin.rongyundemo.http.retrofit.GankApi;
+import com.exam.admin.rongyundemo.http.retrofit.RetrofitHelper;
+import com.exam.admin.rongyundemo.http.rxjava.RxHelper;
 import com.exam.admin.rongyundemo.http.utils.GankBaseUrl;
-import com.exam.admin.rongyundemo.http.utils.RetrofitFactory;
 import com.exam.admin.rongyundemo.utils.ToastUtils;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 
 /**
- * ========================
  * Name: AllFragment
  * Des:
  * User: 吴飞
  * Date: 2017/8/15 10:25
- * =========================
+ *
+ * @author Administrator
  */
 
 public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, BaseQuickAdapter.RequestLoadMoreListener {
@@ -47,24 +48,15 @@ public class AllFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     }
 
     private void getData(final boolean isRefesh) {
-        RetrofitFactory
-                .creatRetrofit(GankBaseUrl.DATA)
+        RetrofitHelper
+                .createRetrofit(GankBaseUrl.DATA)
                 .create(GankApi.class)
                 .getAll(pageNum)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new BaseSubscriber<AllResponse>() {
+                .compose(RxHelper.<AllResult>normalSchedulers(this))
+                .subscribe(new BaseObserver<AllResult>() {
                     @Override
-                    protected void doOnNext(AllResponse response) {
-                        if (isRefesh) {
-                            cancelLoading();
-                            adapter.setNewData(response.getResults());
-                            swiperefreshlayout.setRefreshing(false);
-                            adapter.setEnableLoadMore(true);
-                        } else {
-                            adapter.addData(response.getResults());
-                            adapter.loadMoreComplete();
-                        }
+                    protected void onSuccess(AllResult result) {
+                        new ArrayList<>();
                     }
 
                     @Override

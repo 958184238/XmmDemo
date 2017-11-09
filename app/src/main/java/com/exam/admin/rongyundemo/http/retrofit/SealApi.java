@@ -1,4 +1,4 @@
-package com.exam.admin.rongyundemo.http.utils;
+package com.exam.admin.rongyundemo.http.retrofit;
 
 
 import com.exam.admin.rongyundemo.http.request.LoginRequest;
@@ -9,12 +9,9 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 /**
- * ========================
- * Name: SealApi
- * Des:
- * User: 吴飞
- * Date: 2017/8/4 16:06
- * =========================
+ * 2017/8/4 16:06
+ *
+ * @author wufei
  */
 
 public interface SealApi {

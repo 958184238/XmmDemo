@@ -72,7 +72,6 @@ public class DiscoverFragment extends BaseFragment {
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-//                ToastUtils.showShort(mContext, "hahah" + position);
                 switch (position) {
                     case 0:
                         startActivity(new Intent(mContext, MultiImageActivity.class));
@@ -97,7 +96,8 @@ public class DiscoverFragment extends BaseFragment {
                                         }
                                     }
                                 });
-
+                        break;
+                    default:
                         break;
 
                 }
