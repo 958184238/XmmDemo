@@ -1,28 +1,27 @@
 package com.exam.admin.rongyundemo.utils.glide;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
-import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 /**
- * ========================
  * Name: GlideUtils
- * Des:
- * User: 吴飞
  * Date: 2017/8/17 14:46
- * =========================
+ *
+ * @author wufei
  */
 
 public class GlideUtils {
@@ -37,39 +36,39 @@ public class GlideUtils {
      */
     public static void loadImage(Context context, String url, String thumbnailUrl, final ImageView imageView, final ProgressBar progressBar) {
         // 跳过内存缓存,不缓存到SDCard中
-        Glide.with(context)
+        GlideApp.with(context)
                 .load(url)
-                .thumbnail(Glide.with(context)
+                .thumbnail(GlideApp.with(context)
                         .load(thumbnailUrl)
                         .skipMemoryCache(true)
                         .diskCacheStrategy(DiskCacheStrategy.NONE)
-                        .listener(new RequestListener<String, GlideDrawable>() {
-                                      @Override
-                                      public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                                          return false;
-                                      }
+                        .listener(new RequestListener<Drawable>() {
+                            @Override
+                            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                return false;
+                            }
 
-                                      @Override
-                                      public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                                          progressBar.setVisibility(View.VISIBLE);
-                                          return false;
-                                      }
-                                  }
+                            @Override
+                            public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                                progressBar.setVisibility(View.VISIBLE);
+                                return false;
+                            }
+                        }))
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        progressBar.setVisibility(View.GONE);
+                        return false;
+                    }
 
-                        )).listener(new RequestListener<String, GlideDrawable>() {
-            @Override
-            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                progressBar.setVisibility(View.GONE);
-                return false;
-            }
-
-            @Override
-            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                progressBar.setVisibility(View.GONE);
-                imageView.setVisibility(View.VISIBLE);
-                return false;
-            }
-        }).into(imageView);
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        progressBar.setVisibility(View.GONE);
+                        imageView.setVisibility(View.VISIBLE);
+                        return false;
+                    }
+                })
+                .into(imageView);
     }
 
     /**
@@ -80,9 +79,8 @@ public class GlideUtils {
      * @param view
      */
     public static void loadNormal(Context context, String url, ImageView view) {
-        Glide.with(context)
+        GlideApp.with(context)
                 .load(url)
-//                .thumbnail(0.1f)
                 .into(view);
     }
 
@@ -94,17 +92,10 @@ public class GlideUtils {
      * @param view
      */
     public static void loadBlur(Context context, String url, ImageView view) {
-        Glide.with(context)
+        GlideApp.with(context)
                 .load(url)
-//                .thumbnail(0.1f)
-                .bitmapTransform(new BlurTransformation(context, 23, 4))
-                .into(new GlideDrawableImageViewTarget(view) {
-                    @Override
-                    public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
-                        super.onResourceReady(resource, animation);
-                    }
-                });
-
+                .apply(RequestOptions.bitmapTransform(new BlurTransformation(23, 4)))
+                .into(view);
     }
 
     /**
@@ -116,10 +107,9 @@ public class GlideUtils {
      */
 
     public static void loadCropCircle(Context context, String url, ImageView view) {
-        Glide.with(context)
+        GlideApp.with(context)
                 .load(url)
-//                .thumbnail(0.1f)
-                .bitmapTransform(new CropCircleTransformation(context))
+                .apply(RequestOptions.circleCropTransform())
                 .into(view);
     }
 }

@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.exam.admin.rongyundemo.R;
+import com.exam.admin.rongyundemo.activity.demo.AddAmountActivity;
 import com.exam.admin.rongyundemo.activity.demo.DialogActivity;
+import com.exam.admin.rongyundemo.activity.demo.FlodeMenuActivity;
 import com.exam.admin.rongyundemo.activity.demo.MultiImageActivity;
 import com.exam.admin.rongyundemo.activity.demo.StaggeredActivity;
 import com.exam.admin.rongyundemo.adapter.DiscoverAdapter;
@@ -65,6 +67,8 @@ public class DiscoverFragment extends BaseFragment {
         list.add("照片墙");
         list.add("Dialog");
         list.add("权限");
+        list.add("折叠菜单");
+        list.add("数字不断增加");
         LinearLayoutManager manager = new LinearLayoutManager(mContext);
         recyclerview.setLayoutManager(manager);
         DiscoverAdapter adapter = new DiscoverAdapter(mContext, R.layout.discover_item, list);
@@ -96,6 +100,13 @@ public class DiscoverFragment extends BaseFragment {
                                         }
                                     }
                                 });
+                        break;
+                    case 4:
+                        startActivity(new Intent(mContext, FlodeMenuActivity.class));
+                        break;
+
+                    case 5:
+                        startActivity(new Intent(mContext, AddAmountActivity.class));
                         break;
                     default:
                         break;

@@ -33,4 +33,13 @@
         <!-- 设置光标 -->
         <item name="android:textCursorDrawable">@drawable/line</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/loading</item>
+    </style>
 </resources>

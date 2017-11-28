@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-    <!--<attr name="titleText" format="string" />-->
-    <!--<attr name="titleTextColor" format="color" />-->
-    <!--<attr name="titleTextSize" format="dimension" />-->
-
-    <attr name="room_list_riv_radius" format="dimension"/>
-    <attr name="room_list_riv_topLeftRadius" format="dimension"/>
-    <attr name="room_list_riv_topRightRadius" format="dimension"/>
-    <attr name="room_list_riv_bottomLeftRadius" format="dimension"/>
-    <attr name="room_list_riv_bottomRightRadius" format="dimension"/>
-
     <declare-styleable name="Room_List_RoundedImageView">
         <attr name="room_list_riv_radius" />
         <attr name="room_list_riv_topLeftRadius" />
         <attr name="room_list_riv_topRightRadius" />
         <attr name="room_list_riv_bottomLeftRadius" />
         <attr name="room_list_riv_bottomRightRadius" />
+    </declare-styleable>
+
+    <declare-styleable name="FoldButton">
+        <!--背景颜色-->
+        <attr name="bgColor" format="color" />
+        <!--文字大小-->
+        <attr name="textSize" format="dimension" />
+        <!--文字内容-->
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="NumberProgressBar">
+        <!--进度条颜色-->
+        <attr name="rectColor" format="color" />
+        <!--文字大小-->
+        <attr name="rectTextSize" format="dimension" />
+        <!--文字颜色-->
+        <attr name="rectTextColor" format="color" />
     </declare-styleable>
 
 

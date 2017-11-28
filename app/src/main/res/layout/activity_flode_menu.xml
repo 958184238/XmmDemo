@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.exam.admin.rongyundemo.activity.demo.FlodeMenuActivity">
+
+    <com.exam.admin.rongyundemo.widget.FoldButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp" />
+
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/about_seal" />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:text="juzong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.exam.admin.rongyundemo.widget.NumberProgressBar
+            android:id="@+id/number_progress_bar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            custom:rectTextColor="@color/white" />
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

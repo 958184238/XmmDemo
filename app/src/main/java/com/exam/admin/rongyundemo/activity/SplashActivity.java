@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 
-import com.exam.admin.rongyundemo.R;
 import com.exam.admin.rongyundemo.contanst.SealConst;
 import com.exam.admin.rongyundemo.utils.SPUtils;
 
@@ -18,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+//        setContentView(R.layout.activity_splash);
         context = this;
         String loginToken = (String) SPUtils.get(context, SealConst.SEALTALK_LOGING_TOKEN, "");
         if (TextUtils.isEmpty(loginToken)) {
@@ -36,6 +35,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }, 800);
         }
+
     }
 
     private void goToMain() {

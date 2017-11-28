@@ -22,8 +22,6 @@ import com.exam.admin.rongyundemo.activity.webview.config.IWebPageView;
 import com.exam.admin.rongyundemo.activity.webview.config.ImageClickInterface;
 import com.exam.admin.rongyundemo.activity.webview.config.MyWebChromeClient;
 import com.exam.admin.rongyundemo.activity.webview.config.MyWebViewClient;
-import com.exam.admin.rongyundemo.utils.CommonUtils;
-import com.exam.admin.rongyundemo.widget.statusbar.StatusBarUtil;
 
 
 /**
@@ -63,7 +61,7 @@ public class WebViewActivity extends AppCompatActivity implements IWebPageView {
     }
 
     private void initTitle() {
-        StatusBarUtil.setColor(this, CommonUtils.getColor(R.color.colorTheme),0);
+//        StatusBarUtil.setColor(this, CommonUtils.getColor(R.color.colorTheme),0);
         mProgressBar = (ProgressBar) findViewById(R.id.pb_progress);
         webView = (WebView) findViewById(R.id.webview_detail);
         videoFullView = (FrameLayout) findViewById(R.id.video_fullView);
